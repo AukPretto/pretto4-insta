@@ -2,47 +2,190 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pretto4 Insta – Compte Instagram Officiel</title>
-  <meta name="description" content="Retrouvez le compte Instagram officiel de pretto4. Art visuel entre chaos, glitch, mémoire et introspection. Suivez pretto_4 sur Instagram.">
-  <meta name="keywords" content="pretto4, pretto4 insta, pretto_4 instagram, art glitch, mémoire, chaos, dreamcore">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Pretto4 | Dessin Noir et Blanc, Art Brut, Weird Perspective</title>
+  <meta name="description" content="Pretto4 : dessin noir et blanc, couleur, art brut et perspectives étranges. Actual art expérimental entre glitch et chaos visuel. Instagram & YouTube">
+  <meta name="keywords" content="pretto4, pretto4 instagram, pretto4 insta, pretto_4, dessin noir et blanc, dessin couleur, art brut, weird perspective, actual art, art expérimental, dessin étrange, perspective bizarre, raw art, outsider art, contemporary drawing, black and white drawing, colored drawing">
+  <meta name="author" content="Pretto4">
   <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pretto4 - Dessin Noir et Blanc, Art Brut, Weird Perspective">
+  <meta property="og:description" content="Actual art expérimental : dessin noir et blanc, couleur, perspectives étranges et art brut par Pretto4">
+  <meta property="og:url" content="https://AukPretto.github.io/pretto4-insta/">
+  
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://www.instagram.com/pretto_4/">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pretto4",
+    "alternateName": ["pretto4", "pretto_4"],
+    "description": "Artiste spécialisé dans le dessin noir et blanc, couleur, art brut et perspectives étranges. Actual art expérimental",
+    "url": "https://AukPretto.github.io/pretto4-insta/",
+    "sameAs": [
+      "https://www.instagram.com/pretto_4/",
+      "https://www.youtube.com/@L%C3%A9ny-Prettooo4"
+    ],
+    "knowsAbout": ["Dessin Noir et Blanc", "Dessin Couleur", "Art Brut", "Weird Perspective", "Actual Art", "Art Expérimental"]
+  }
+  </script>
+  
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      background-color: #0d0d0d;
-      color: #f2f2f2;
+      background: #0a0a0a;
+      color: #e0e0e0;
       font-family: "Courier New", monospace;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
       padding: 2rem;
+      position: relative;
     }
+    
+    /* Effet glitch subtil */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 231, 0.02) 2px,
+        rgba(0, 255, 231, 0.02) 4px
+      );
+      pointer-events: none;
+    }
+    
+    .container {
+      max-width: 600px;
+      z-index: 1;
+    }
+    
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: 3rem;
+      line-height: 1.3;
     }
-    a {
+    
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    
+    .link {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(0, 255, 231, 0.3);
       color: #00ffe7;
       text-decoration: none;
       font-weight: bold;
+      transition: all 0.3s ease;
+      min-width: 200px;
+      position: relative;
+      overflow: hidden;
     }
-    a:hover {
-      text-decoration: underline;
+    
+    .link:hover {
+      background: rgba(0, 255, 231, 0.1);
+      border-color: #00ffe7;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 255, 231, 0.2);
     }
-    .subtext {
-      margin-top: 1rem;
-      font-size: 0.9rem;
-      color: #999;
+    
+    /* Effet glitch au hover */
+    .link:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 0, 102, 0.1),
+        transparent
+      );
+      animation: glitch-sweep 0.6s ease-out;
+    }
+    
+    @keyframes glitch-sweep {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    
+    .instagram { border-color: rgba(255, 0, 102, 0.3); }
+    .instagram:hover { 
+      border-color: #ff0066;
+      color: #ff0066;
+      background: rgba(255, 0, 102, 0.1);
+    }
+    
+    .youtube { border-color: rgba(255, 255, 255, 0.3); }
+    .youtube:hover {
+      border-color: #ffffff;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 480px) {
+      .links {
+        width: 100%;
+      }
+      
+      .link {
+        width: 100%;
+        min-width: unset;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>pretto4 insta → <a href="https://www.instagram.com/pretto_4/" target="_blank">@pretto_4</a></h1>
-  <p>Vous cherchez <strong>pretto4</strong> sur Instagram ? C’est ici. Un univers mêlant glitch, brutalisme, mémoire et chaos visuel.</p>
-  <div class="subtext">Requête fréquente : <em>pretto4 insta</em></div>
+  <div class="container">
+    <h1>pretto4</h1>
+    
+    <div class="links">
+      <a href="https://www.instagram.com/pretto_4/" target="_blank" rel="noopener" class="link instagram">
+        Instagram
+      </a>
+      
+      <a href="https://www.youtube.com/@L%C3%A9ny-Prettooo4" target="_blank" rel="noopener" class="link youtube">
+        YouTube
+      </a>
+    </div>
+  </div>
+  
+  <!-- Contenu SEO invisible -->
+  <div style="position: absolute; left: -9999px; top: -9999px;">
+    <h2>Pretto4 - Dessin Noir et Blanc, Art Brut, Weird Perspective</h2>
+    <p>Découvrez pretto4 sur Instagram et YouTube. Spécialiste du dessin noir et blanc, dessin en couleur, art brut et perspectives étranges. Actual art expérimental mêlant raw drawing et contemporary art. @pretto_4 crée des œuvres uniques aux perspectives bizarres, entre outsider art et création brute.</p>
+    <p>Pretto4 Instagram : https://www.instagram.com/pretto_4/ - YouTube : https://www.youtube.com/@L%C3%A9ny-Prettooo4</p>
+    <p>Recherches : pretto4 instagram, pretto4 insta, pretto4 dessin, dessin noir et blanc pretto4, art brut pretto4, weird perspective art, actual art pretto4, pretto4 youtube, raw drawing, perspective bizarre, outsider art, contemporary drawing, experimental sketch, black and white art, colored drawing, strange perspective</p>
+  </div>
 </body>
 </html>
